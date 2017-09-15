@@ -557,6 +557,61 @@ INSERT INTO `tbl_instrutor` VALUES (1,123,'Gabriel Santos','Masculino','Solteiro
 UNLOCK TABLES;
 
 --
+-- Table structure for table `tbl_instrutor_tudao`
+--
+
+DROP TABLE IF EXISTS `tbl_instrutor_tudao`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `tbl_instrutor_tudao` (
+  `id_instrutor` int(11) NOT NULL AUTO_INCREMENT,
+  `codigo_anac` varchar(45) DEFAULT NULL,
+  `nome` varchar(45) DEFAULT NULL,
+  `dt_nasc` varchar(45) DEFAULT NULL,
+  `sexo` varchar(45) DEFAULT NULL,
+  `nacionalidade` varchar(45) DEFAULT NULL,
+  `naturalidade` varchar(45) DEFAULT NULL,
+  `sangue` varchar(45) DEFAULT NULL,
+  `alergia` varchar(45) DEFAULT NULL,
+  `estado_civil` varchar(45) DEFAULT NULL,
+  `nome_pai` varchar(45) DEFAULT NULL,
+  `nome_mae` varchar(45) DEFAULT NULL,
+  `rg` varchar(45) DEFAULT NULL,
+  `cpf` varchar(45) DEFAULT NULL,
+  `escolaridade` varchar(45) DEFAULT NULL,
+  `rua` varchar(45) DEFAULT NULL,
+  `numero` varchar(45) DEFAULT NULL,
+  `cidade` varchar(45) DEFAULT NULL,
+  `estado` varchar(45) DEFAULT NULL,
+  `cep` varchar(45) DEFAULT NULL,
+  `telefone` varchar(45) DEFAULT NULL,
+  `celular` varchar(45) DEFAULT NULL,
+  `email` varchar(45) DEFAULT NULL,
+  `contatar` varchar(45) DEFAULT NULL,
+  `parentesco` varchar(45) DEFAULT NULL,
+  `endereco_emergencia` varchar(45) DEFAULT NULL,
+  `bairro_emergencia` varchar(45) DEFAULT NULL,
+  `cidade_emergencia` varchar(45) DEFAULT NULL,
+  `uf_emergencia` varchar(45) DEFAULT NULL,
+  `cep_emergencia` varchar(45) DEFAULT NULL,
+  `telefone_emergencia` varchar(45) DEFAULT NULL,
+  `celular_emergencia` varchar(45) DEFAULT NULL,
+  `recado_emergencia` varchar(45) DEFAULT NULL,
+  PRIMARY KEY (`id_instrutor`)
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `tbl_instrutor_tudao`
+--
+
+LOCK TABLES `tbl_instrutor_tudao` WRITE;
+/*!40000 ALTER TABLE `tbl_instrutor_tudao` DISABLE KEYS */;
+INSERT INTO `tbl_instrutor_tudao` VALUES (1,'12','12','12','12','12','12','12','6','6','6','6','6','6','6','6','6','6','6','6',NULL,'66','6','66','6','6','6','6','SP','6','6','6','6'),(2,'123','name name','2017-09-11','F','brasileira','jandira','-','não','Casado','Papai','Mamãe','rg','cpf','3','rua','numero','cidade','SP','cep','telefone','celular','email','contata','Mãe','endereco','bairro','cidade','SP','cep','rtelefone','celular','recado'),(3,'123','name name','2017-09-12','M','brasileira','jandira','B','não','Casado','Papai','Mamãe','12.456.789-0','123.456.789-12','1','rua','numero','cidade','SP','cep','telefone','celular','email','contata','Mãe','endereco','bairro','cidade','SP','cep','rtelefone','celular','recado'),(4,'','','','','brasileira','','A','','Casado','','','','','1','','','','SP','','','','','','Mãe','','','','SP','','','','');
+/*!40000 ALTER TABLE `tbl_instrutor_tudao` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `tbl_matricula`
 --
 
@@ -644,4 +699,8 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
+<<<<<<< HEAD
 -- Dump completed on 2017-09-15  5:32:54
+=======
+-- Dump completed on 2017-09-15  5:29:03
+>>>>>>> 6582d535ece966ce10f09f84404d4fd0ac9dc58c

@@ -193,7 +193,11 @@
                         </div>
 
                         <div class="lado_direito">
-                            <input type="text" name="txt_nome" value="">
+                            <select name="cb_escolaridade">
+                                <option value="">1º</option>
+                                <option value="">2°</option>
+                                <option value="">3°</option>
+                            </select>
                         </div>
                     </div>
                 </div>

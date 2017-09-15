@@ -210,7 +210,7 @@
                         </div>
 
                         <div class="lado_direito">
-                            <select name="cb_estado_civil">
+                            <select name="cb_escolaridade">
                                 <option value="">1º</option>
                                 <option value="">2°</option>
                                 <option value="">3°</option>

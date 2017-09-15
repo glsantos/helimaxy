@@ -78,10 +78,10 @@ DROP TABLE IF EXISTS `tbl_aluno`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `tbl_aluno` (
   `id_aluno` int(11) NOT NULL AUTO_INCREMENT,
-  `cod_anac` int(11) NOT NULL,
+  `cod_anac` int(11) DEFAULT NULL,
   `nome` varchar(45) NOT NULL,
   `sexo` varchar(45) DEFAULT NULL,
-  `estado civil` varchar(45) DEFAULT NULL,
+  `estado_civil` varchar(45) DEFAULT NULL,
   `rg` varchar(45) DEFAULT NULL,
   `cpf` varchar(45) DEFAULT NULL,
   `escolaridade` varchar(45) DEFAULT NULL,
@@ -94,7 +94,7 @@ CREATE TABLE `tbl_aluno` (
   `alergias` text,
   `foto` varchar(150) DEFAULT NULL,
   PRIMARY KEY (`id_aluno`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -103,7 +103,7 @@ CREATE TABLE `tbl_aluno` (
 
 LOCK TABLES `tbl_aluno` WRITE;
 /*!40000 ALTER TABLE `tbl_aluno` DISABLE KEYS */;
-INSERT INTO `tbl_aluno` VALUES (1,123,'Gabriel Santos','Masculino','Solteiro','123','123','teste','Carapicuiba - SP','brasileiro','14/07/2000','Paulo Luiz','Maria Cicera','A','não','testeteste.png'),(2,123,'Gabriel Santos','Masculino','Solteiro','123','123','3ºGrau Incompleto','Carapicuiba-SP','brasileira','2000-70-14','Paulo Luiz','Maria Cicera','A','não','teste');
+INSERT INTO `tbl_aluno` VALUES (1,123,'magno','M','C','asdas','asdasd','1','askdjas','b','2017-09-06','asdas','asdasd','A','asdasd','testeteste.png'),(2,123,'Gabriel Santos','Masculino','Solteiro','123','123','3ºGrau Incompleto','Carapicuiba-SP','brasileira','2000-70-14','Paulo Luiz','Maria Cicera','A','não','teste'),(3,NULL,'wesley','M','C','asdas','asdasd','1','askdjas','b','2017-09-05','asdas','asdasd','A','asdasd',NULL),(4,NULL,'wesley','M','C','asdas','asdasd','1','askdjas','b','2017-09-06','asdas','asdasd','A','asdasd',NULL),(5,NULL,'magno','','C','asdas','asdasd','1','askdjas','b','','asdas','asdasd','A','asdasd',NULL);
 /*!40000 ALTER TABLE `tbl_aluno` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -644,4 +644,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2017-09-15  1:57:22
+-- Dump completed on 2017-09-15  5:32:54

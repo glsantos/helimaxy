@@ -18,6 +18,34 @@ USE `db_helimaxy`;
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
+-- Table structure for table `tbl_administrador`
+--
+
+DROP TABLE IF EXISTS `tbl_administrador`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `tbl_administrador` (
+  `id_administrador` int(11) NOT NULL AUTO_INCREMENT,
+  `usuario` varchar(45) DEFAULT NULL,
+  `senha` varchar(45) DEFAULT NULL,
+  `id_instrutor` int(11) DEFAULT NULL,
+  PRIMARY KEY (`id_administrador`),
+  KEY `fk_id_instrutor_admin_idx` (`id_instrutor`),
+  CONSTRAINT `fk_id_instrutor_admin` FOREIGN KEY (`id_instrutor`) REFERENCES `tbl_instrutor` (`id_instrutor`) ON DELETE NO ACTION ON UPDATE NO ACTION
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `tbl_administrador`
+--
+
+LOCK TABLES `tbl_administrador` WRITE;
+/*!40000 ALTER TABLE `tbl_administrador` DISABLE KEYS */;
+INSERT INTO `tbl_administrador` VALUES (1,'glsantos','123',1);
+/*!40000 ALTER TABLE `tbl_administrador` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `tbl_aeronave`
 --
 
@@ -359,7 +387,7 @@ DROP TABLE IF EXISTS `tbl_exec`;
 CREATE TABLE `tbl_exec` (
   `id_exercicio` int(11) NOT NULL AUTO_INCREMENT,
   `exercicio` varchar(100) DEFAULT NULL,
-  `grau` int(11) DEFAULT NULL,
+  `grau` varchar(10) DEFAULT NULL,
   PRIMARY KEY (`id_exercicio`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -505,6 +533,7 @@ CREATE TABLE `tbl_instrutor` (
   `rg` varchar(45) DEFAULT NULL,
   `cpf` varchar(45) DEFAULT NULL,
   `escolaridade` varchar(45) DEFAULT NULL,
+  `nascimento` varchar(45) DEFAULT NULL,
   `naturalidade` varchar(45) DEFAULT NULL,
   `nacionalidade` varchar(45) DEFAULT NULL,
   `nome_pai` varchar(45) DEFAULT NULL,
@@ -514,7 +543,7 @@ CREATE TABLE `tbl_instrutor` (
   `valor_hora` decimal(10,0) DEFAULT NULL,
   `foto` varchar(150) DEFAULT NULL,
   PRIMARY KEY (`id_instrutor`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -523,6 +552,7 @@ CREATE TABLE `tbl_instrutor` (
 
 LOCK TABLES `tbl_instrutor` WRITE;
 /*!40000 ALTER TABLE `tbl_instrutor` DISABLE KEYS */;
+INSERT INTO `tbl_instrutor` VALUES (1,123,'Gabriel Santos','Masculino','Solteiro','123','123',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL);
 /*!40000 ALTER TABLE `tbl_instrutor` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -614,4 +644,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2017-09-14 20:19:31
+-- Dump completed on 2017-09-15  1:57:22

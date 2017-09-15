@@ -1,0 +1,300 @@
+/*CSS*/
+body{
+    margin:auto;
+    padding:0;
+}
+/*------------------------MENU P�GINAS---------------------*/
+
+#header{
+    width:auto;
+    height:150px;
+    background-color:#043463;
+    box-shadow: 5px 5px #d3d1d1;
+}
+
+#container_menu{
+    width:1200px;
+    height:150px;
+    margin:auto;
+}
+
+#logo{
+    width:200px;
+    height:115px;
+    margin-top:20px;
+    margin-left:10px;
+    position:absolute;
+}
+
+#logo img{
+    width:200px;
+    height:115px;
+    border-radius:10px;
+}
+
+#menu{
+    width:1100px;
+    height:50px;
+    margin-left:280px;
+    margin-top:100px;
+    position:absolute;
+}
+
+#menu ul li{
+    width:120px;
+    height:30px;
+    margin-right:30px;
+    background-color:#ff0000;
+    float:left;
+    list-style-type:none;
+    text-align: center;
+    border-radius:10px 3px;
+}
+
+#menu ul li a{
+    font-size:16px;
+    font-weight:900;
+    font-family:verdana;
+    color:#ffffff;
+    margin-top:5px;
+}
+
+
+#menu ul li a:hover{
+    color:#969ba5;
+}
+
+#menu ul li a:link{
+    color:red;
+    text-decoration:none;
+}
+
+/*---------------------FIM MENU P�GINAS--------------------*/
+
+/*------------------------ALUNO-------------------------*/
+.principal{
+    width:1000px;
+    height:300px;
+    background-color: magenta;
+}
+.area_relatorio{
+    width:100%;
+    height:90%;
+    margin-left: : auto;
+    margin-right: auto;
+    background-color: magenta;
+    float:left;
+}
+.area_filtro{
+    width:100%;
+    height:25%;
+    background-color: lime;
+    float: left;
+}
+.area_resultado{
+    width:100%;
+    height: 85%;
+    background-color: yellow;
+}
+.tbl_resultado{
+    width:100%;
+    height:auto;
+    color: balck;
+}
+.tbl_resultado tr{
+    height:20px;
+}
+.tbl_resultado td{
+    width:10px;
+    background-color: magenta;
+    text-align: center;
+    font-weight: bold;
+}
+.tbl_resultado img{
+    width:25px;
+    height:25px;
+}
+#container_aluno{
+    width:1200px;
+    height:780px;
+    margin:auto;
+    background-color:#dee0e2;
+    border-radius:10px;
+    box-shadow: 5px 5px #d3d1d1;
+}
+
+#titulo_aluno{
+    width:1200px;
+    height:50px;
+    padding-top:10px;
+    margin-top:10px;
+    text-align: center;
+    border-bottom: 1px solid #000000;
+    float:left;
+}
+
+#titulo_aluno h2{
+    font-size:20px;
+    font-weight:900;
+    font-family:verdana;
+    color:#000000;
+
+}
+
+/*linha 1*/
+
+#primeira_linha{
+    width:1200px;
+    height:auto;
+    border-top:1px solid #000000;
+    border-bottom:1px solid #000000;
+}
+
+#container_linha1{
+    width:400px;
+    height:450px;
+    margin:auto;
+}
+
+.lado_esquerdo{
+    width:200px;
+    right:30px;
+    margin-top:5px;
+    margin-bottom:10px;
+    float:left;
+    text-align:right;
+}
+
+.lado_esquerdo a{
+    font-size:14px;
+    font-weight:900;
+    font-family:verdana;
+    color:#000000;
+}
+
+.lado_direito{
+    width:150px;
+    height:30px;
+    margin-top:5px;
+    margin-left:5px;
+    float:left;
+    margin-bottom:10px;
+}
+
+.lado_direito input{
+    width:200px;
+    height:15px;
+    border-top:0px;
+    border-left:0px;
+    border-right:0px;
+    border-bottom: 1px solid #4f75ad;
+    background-color:#f4f5f7;
+}
+
+/*fim linha 1*/
+
+/*linha 2*/
+
+#segunda_linha{
+    width:1200px;
+    height:130px;
+    border-top:1px solid #000000;
+    border-bottom:1px solid #000000;
+}
+
+#container_linha2{
+    width:450px;
+    height:100px;
+    margin:auto;
+}
+
+/*fim linha2*/
+
+/*linha 3*/
+#terceira_linha{
+    width:1200px;
+    height:130px;
+    border-top:1px solid #000000;
+    border-bottom:1px solid #000000;
+
+}
+
+#container_linha3{
+    width:400px;
+    height:130px;
+    position:absolute;
+    margin-left:200px;
+}
+
+#container2_linha3{
+    width:450px;
+    height:130px;
+    margin-left:650px;
+    position:absolute;
+}
+
+/*fim linha3*/
+
+/*linha 4*/
+
+#quarta_linha{
+    width:1200px;
+    height:50px;
+    border-top:1px solid #000000;
+    border-bottom:1px solid #000000;
+}
+
+#container_linha4{
+    width:400px;
+    height:50px;
+    margin:auto;
+
+}
+/*fim linha 4*/
+
+/*linha 5*/
+#quinta_linha{
+    width:1200px;
+    height:220px;
+    border-top:1px solid #000000;
+    border-bottom:1px solid #000000;
+}
+#container_linha5{
+    width:800px;
+    height:220px;
+    margin:auto;
+}
+/*fim linha5*/
+
+/*linha 6*/
+#sexta_linha{
+    width:1200px;
+    height:50px;
+    border-top:1px solid #000000;
+    border-bottom:2px solid #000000;
+}
+
+#container_linha6{
+    width:450px;
+    height:50px;
+    margin:auto;
+}
+/*fim linha6*/
+
+#container_buttons{
+    width:280px;
+    height:50px;
+    margin-left:900px;
+    margin-top:10px;
+}
+
+#container_buttons input{
+    width:130px;
+    height:40px;
+    color:#ffffff;
+    background-color:#525963;
+    font-family: verdana;
+    border-radius: 10px 5px 10px 5px;
+}
+.
+/*----------------------FIM ALUNO-----------------------*/

@@ -18,34 +18,6 @@ USE `db_helimaxy`;
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Table structure for table `tbl_administrador`
---
-
-DROP TABLE IF EXISTS `tbl_administrador`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `tbl_administrador` (
-  `id_administrador` int(11) NOT NULL AUTO_INCREMENT,
-  `usuario` varchar(45) DEFAULT NULL,
-  `senha` varchar(45) DEFAULT NULL,
-  `id_instrutor` int(11) DEFAULT NULL,
-  PRIMARY KEY (`id_administrador`),
-  KEY `fk_id_instrutor_admin_idx` (`id_instrutor`),
-  CONSTRAINT `fk_id_instrutor_admin` FOREIGN KEY (`id_instrutor`) REFERENCES `tbl_instrutor` (`id_instrutor`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `tbl_administrador`
---
-
-LOCK TABLES `tbl_administrador` WRITE;
-/*!40000 ALTER TABLE `tbl_administrador` DISABLE KEYS */;
-INSERT INTO `tbl_administrador` VALUES (1,'glsantos','123',1);
-/*!40000 ALTER TABLE `tbl_administrador` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
 -- Table structure for table `tbl_aeronave`
 --
 
@@ -78,10 +50,10 @@ DROP TABLE IF EXISTS `tbl_aluno`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `tbl_aluno` (
   `id_aluno` int(11) NOT NULL AUTO_INCREMENT,
-  `cod_anac` int(11) DEFAULT NULL,
+  `cod_anac` int(11) NOT NULL,
   `nome` varchar(45) NOT NULL,
   `sexo` varchar(45) DEFAULT NULL,
-  `estado_civil` varchar(45) DEFAULT NULL,
+  `estado civil` varchar(45) DEFAULT NULL,
   `rg` varchar(45) DEFAULT NULL,
   `cpf` varchar(45) DEFAULT NULL,
   `escolaridade` varchar(45) DEFAULT NULL,
@@ -94,7 +66,7 @@ CREATE TABLE `tbl_aluno` (
   `alergias` text,
   `foto` varchar(150) DEFAULT NULL,
   PRIMARY KEY (`id_aluno`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -103,7 +75,7 @@ CREATE TABLE `tbl_aluno` (
 
 LOCK TABLES `tbl_aluno` WRITE;
 /*!40000 ALTER TABLE `tbl_aluno` DISABLE KEYS */;
-INSERT INTO `tbl_aluno` VALUES (1,123,'magno','M','C','asdas','asdasd','1','askdjas','b','2017-09-06','asdas','asdasd','A','asdasd','testeteste.png'),(2,123,'Gabriel Santos','Masculino','Solteiro','123','123','3ºGrau Incompleto','Carapicuiba-SP','brasileira','2000-70-14','Paulo Luiz','Maria Cicera','A','não','teste'),(3,NULL,'wesley','M','C','asdas','asdasd','1','askdjas','b','2017-09-05','asdas','asdasd','A','asdasd',NULL),(4,NULL,'wesley','M','C','asdas','asdasd','1','askdjas','b','2017-09-06','asdas','asdasd','A','asdasd',NULL),(5,NULL,'magno','','C','asdas','asdasd','1','askdjas','b','','asdas','asdasd','A','asdasd',NULL);
+INSERT INTO `tbl_aluno` VALUES (1,123,'Gabriel Santos','Masculino','Solteiro','123','123','teste','Carapicuiba - SP','brasileiro','14/07/2000','Paulo Luiz','Maria Cicera','A','não','testeteste.png'),(2,123,'Gabriel Santos','Masculino','Solteiro','123','123','3ºGrau Incompleto','Carapicuiba-SP','brasileira','2000-70-14','Paulo Luiz','Maria Cicera','A','não','teste');
 /*!40000 ALTER TABLE `tbl_aluno` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -387,7 +359,7 @@ DROP TABLE IF EXISTS `tbl_exec`;
 CREATE TABLE `tbl_exec` (
   `id_exercicio` int(11) NOT NULL AUTO_INCREMENT,
   `exercicio` varchar(100) DEFAULT NULL,
-  `grau` varchar(10) DEFAULT NULL,
+  `grau` int(11) DEFAULT NULL,
   PRIMARY KEY (`id_exercicio`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -518,6 +490,95 @@ LOCK TABLES `tbl_fips_recomendacao` WRITE;
 UNLOCK TABLES;
 
 --
+-- Table structure for table `tbl_fips_tudao`
+--
+
+DROP TABLE IF EXISTS `tbl_fips_tudao`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `tbl_fips_tudao` (
+  `id_fips_tudao` int(11) NOT NULL,
+  `canac` varchar(45) DEFAULT NULL,
+  `aluno` varchar(45) DEFAULT NULL,
+  `HTotais` varchar(45) DEFAULT NULL,
+  `PTotais` varchar(45) DEFAULT NULL,
+  `data` varchar(45) DEFAULT NULL,
+  `matricula` varchar(45) DEFAULT NULL,
+  `modelo` varchar(45) DEFAULT NULL,
+  `classe` varchar(45) DEFAULT NULL,
+  `tempovoo` varchar(45) DEFAULT NULL,
+  `poucos` varchar(45) DEFAULT NULL,
+  `instrutorEcanac` varchar(45) DEFAULT NULL,
+  `de1` varchar(45) DEFAULT NULL,
+  `de2` varchar(45) DEFAULT NULL,
+  `de3` varchar(45) DEFAULT NULL,
+  `de4` varchar(45) DEFAULT NULL,
+  `de5` varchar(45) DEFAULT NULL,
+  `para1` varchar(45) DEFAULT NULL,
+  `para2` varchar(45) DEFAULT NULL,
+  `para3` varchar(45) DEFAULT NULL,
+  `para4` varchar(45) DEFAULT NULL,
+  `para5` varchar(45) DEFAULT NULL,
+  `partidaLN1` varchar(45) DEFAULT NULL,
+  `partidaLN2` varchar(45) DEFAULT NULL,
+  `partidaLN3` varchar(45) DEFAULT NULL,
+  `partidaLN4` varchar(45) DEFAULT NULL,
+  `partidaLN5` varchar(45) DEFAULT NULL,
+  `corte1` varchar(45) DEFAULT NULL,
+  `corte2` varchar(45) DEFAULT NULL,
+  `corte3` varchar(45) DEFAULT NULL,
+  `corte4` varchar(45) DEFAULT NULL,
+  `corte5` varchar(45) DEFAULT NULL,
+  `Tvoo1` varchar(45) DEFAULT NULL,
+  `Tvoo2` varchar(45) DEFAULT NULL,
+  `Tvoo3` varchar(45) DEFAULT NULL,
+  `Tvoo4` varchar(45) DEFAULT NULL,
+  `Tvoo5` varchar(45) DEFAULT NULL,
+  `pousosLN1` varchar(45) DEFAULT NULL,
+  `pousosLN2` varchar(45) DEFAULT NULL,
+  `pousosLN3` varchar(45) DEFAULT NULL,
+  `pousosLN4` varchar(45) DEFAULT NULL,
+  `pousosLN5` varchar(45) DEFAULT NULL,
+  `TotalDEvoo` varchar(45) DEFAULT NULL,
+  `TotalDEpousos` varchar(45) DEFAULT NULL,
+  `documentosEequipVoo` varchar(45) DEFAULT NULL,
+  `inspecoes` varchar(45) DEFAULT NULL,
+  `partida` varchar(45) DEFAULT NULL,
+  `cheques` varchar(45) DEFAULT NULL,
+  `fraseologia` varchar(45) DEFAULT NULL,
+  `taxi` varchar(45) DEFAULT NULL,
+  `decolagemNormal` varchar(45) DEFAULT NULL,
+  `subita` varchar(45) DEFAULT NULL,
+  `nivelamento` varchar(45) DEFAULT NULL,
+  `circuitoTrafego` varchar(45) DEFAULT NULL,
+  `aproximacao` varchar(45) DEFAULT NULL,
+  `vooPairado` varchar(45) DEFAULT NULL,
+  `vooAfreteEre` varchar(45) DEFAULT NULL,
+  `vooLateral` varchar(45) DEFAULT NULL,
+  `pousoNormal` varchar(45) DEFAULT NULL,
+  `estacionamento` varchar(45) DEFAULT NULL,
+  `procedimentoAvoo` varchar(45) DEFAULT NULL,
+  `correcoes` varchar(45) DEFAULT NULL,
+  `iniciativa` varchar(45) DEFAULT NULL,
+  `regrasDEvoo` varchar(45) DEFAULT NULL,
+  `comentario` varchar(45) DEFAULT NULL,
+  `vooMental` varchar(45) DEFAULT NULL,
+  `horaDEneceles` varchar(45) DEFAULT NULL,
+  `preparo` varchar(45) DEFAULT NULL,
+  PRIMARY KEY (`id_fips_tudao`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `tbl_fips_tudao`
+--
+
+LOCK TABLES `tbl_fips_tudao` WRITE;
+/*!40000 ALTER TABLE `tbl_fips_tudao` DISABLE KEYS */;
+/*!40000 ALTER TABLE `tbl_fips_tudao` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `tbl_instrutor`
 --
 
@@ -533,7 +594,6 @@ CREATE TABLE `tbl_instrutor` (
   `rg` varchar(45) DEFAULT NULL,
   `cpf` varchar(45) DEFAULT NULL,
   `escolaridade` varchar(45) DEFAULT NULL,
-  `nascimento` varchar(45) DEFAULT NULL,
   `naturalidade` varchar(45) DEFAULT NULL,
   `nacionalidade` varchar(45) DEFAULT NULL,
   `nome_pai` varchar(45) DEFAULT NULL,
@@ -543,7 +603,7 @@ CREATE TABLE `tbl_instrutor` (
   `valor_hora` decimal(10,0) DEFAULT NULL,
   `foto` varchar(150) DEFAULT NULL,
   PRIMARY KEY (`id_instrutor`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -552,63 +612,7 @@ CREATE TABLE `tbl_instrutor` (
 
 LOCK TABLES `tbl_instrutor` WRITE;
 /*!40000 ALTER TABLE `tbl_instrutor` DISABLE KEYS */;
-INSERT INTO `tbl_instrutor` VALUES (1,123,'Gabriel Santos','Masculino','Solteiro','123','123',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL);
 /*!40000 ALTER TABLE `tbl_instrutor` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
--- Table structure for table `tbl_instrutor_tudao`
---
-
-DROP TABLE IF EXISTS `tbl_instrutor_tudao`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `tbl_instrutor_tudao` (
-  `id_instrutor` int(11) NOT NULL AUTO_INCREMENT,
-  `codigo_anac` varchar(45) DEFAULT NULL,
-  `nome` varchar(45) DEFAULT NULL,
-  `dt_nasc` varchar(45) DEFAULT NULL,
-  `sexo` varchar(45) DEFAULT NULL,
-  `nacionalidade` varchar(45) DEFAULT NULL,
-  `naturalidade` varchar(45) DEFAULT NULL,
-  `sangue` varchar(45) DEFAULT NULL,
-  `alergia` varchar(45) DEFAULT NULL,
-  `estado_civil` varchar(45) DEFAULT NULL,
-  `nome_pai` varchar(45) DEFAULT NULL,
-  `nome_mae` varchar(45) DEFAULT NULL,
-  `rg` varchar(45) DEFAULT NULL,
-  `cpf` varchar(45) DEFAULT NULL,
-  `escolaridade` varchar(45) DEFAULT NULL,
-  `rua` varchar(45) DEFAULT NULL,
-  `numero` varchar(45) DEFAULT NULL,
-  `cidade` varchar(45) DEFAULT NULL,
-  `estado` varchar(45) DEFAULT NULL,
-  `cep` varchar(45) DEFAULT NULL,
-  `telefone` varchar(45) DEFAULT NULL,
-  `celular` varchar(45) DEFAULT NULL,
-  `email` varchar(45) DEFAULT NULL,
-  `contatar` varchar(45) DEFAULT NULL,
-  `parentesco` varchar(45) DEFAULT NULL,
-  `endereco_emergencia` varchar(45) DEFAULT NULL,
-  `bairro_emergencia` varchar(45) DEFAULT NULL,
-  `cidade_emergencia` varchar(45) DEFAULT NULL,
-  `uf_emergencia` varchar(45) DEFAULT NULL,
-  `cep_emergencia` varchar(45) DEFAULT NULL,
-  `telefone_emergencia` varchar(45) DEFAULT NULL,
-  `celular_emergencia` varchar(45) DEFAULT NULL,
-  `recado_emergencia` varchar(45) DEFAULT NULL,
-  PRIMARY KEY (`id_instrutor`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `tbl_instrutor_tudao`
---
-
-LOCK TABLES `tbl_instrutor_tudao` WRITE;
-/*!40000 ALTER TABLE `tbl_instrutor_tudao` DISABLE KEYS */;
-INSERT INTO `tbl_instrutor_tudao` VALUES (1,'12','12','12','12','12','12','12','6','6','6','6','6','6','6','6','6','6','6','6',NULL,'66','6','66','6','6','6','6','SP','6','6','6','6'),(2,'123','name name','2017-09-11','F','brasileira','jandira','-','não','Casado','Papai','Mamãe','rg','cpf','3','rua','numero','cidade','SP','cep','telefone','celular','email','contata','Mãe','endereco','bairro','cidade','SP','cep','rtelefone','celular','recado'),(3,'123','name name','2017-09-12','M','brasileira','jandira','B','não','Casado','Papai','Mamãe','12.456.789-0','123.456.789-12','1','rua','numero','cidade','SP','cep','telefone','celular','email','contata','Mãe','endereco','bairro','cidade','SP','cep','rtelefone','celular','recado'),(4,'','','','','brasileira','','A','','Casado','','','','','1','','','','SP','','','','','','Mãe','','','','SP','','','','');
-/*!40000 ALTER TABLE `tbl_instrutor_tudao` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
@@ -689,6 +693,10 @@ LOCK TABLES `tbl_recomendacao` WRITE;
 /*!40000 ALTER TABLE `tbl_recomendacao` DISABLE KEYS */;
 /*!40000 ALTER TABLE `tbl_recomendacao` ENABLE KEYS */;
 UNLOCK TABLES;
+
+--
+-- Dumping routines for database 'db_helimaxy'
+--
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
@@ -699,8 +707,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
-<<<<<<< HEAD
--- Dump completed on 2017-09-15  5:32:54
-=======
--- Dump completed on 2017-09-15  5:29:03
->>>>>>> 6582d535ece966ce10f09f84404d4fd0ac9dc58c
+-- Dump completed on 2017-09-15  6:57:33

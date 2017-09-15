@@ -103,9 +103,16 @@ body{
 
 #primeira_linha{
     width:1200px;
-    height:450px;
+    height:700px;
     border-top:1px solid #000000;
     border-bottom:1px solid #000000;
+}
+
+#upload_img{
+    width:150px;
+    height:150px;
+    background-color:aqua;
+    margin:auto;
 }
 
 #container_linha1{

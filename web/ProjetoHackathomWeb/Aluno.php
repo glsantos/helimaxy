@@ -1,3 +1,16 @@
+<?php
+    //Conexao com o banco
+    $conexao = mysql_connect('localhost', 'root', 'bcd127');
+    mysql_select_db('db_helimaxy');
+	mysql_set_charset('utf-8');
+    
+    $Codigo_anac = $_POST["codigo_anac"];
+    $Nome = $_POST["txt_nome"];
+    $
+    
+    
+    
+?>
 
 <!DOCTYPE html>
 <html>
@@ -57,9 +70,13 @@
                 <div id="container_aluno">
                     <div id="titulo_aluno">
                         <h2>Cadastro de Aluno</h2>
+                        
                     </div>
 
                     <div id="primeira_linha">
+                        <div id="upload_img">
+                            <input type="file" name="fileImagem"/>
+                        </div>
                         <div id="container_linha1">
 
                             <div class="lado_esquerdo"><!--Código Anac-->
@@ -87,7 +104,7 @@
                             </div>
 
                             <div class="lado_direito">
-                                <input type="date" name="txt_nasc" value="">
+                                <input type="date" name="dt_nasc" value="">
                             </div>
 
                             <div class="lado_esquerdo"><!--Sexo-->

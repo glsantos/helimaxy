@@ -121,8 +121,8 @@
     </head>
     
     <body>
+           
         <form action="Aluno.php" method="post" enctype="multipart/form-data">
-            
             <header id="header">
 
                 <div id="container_menu">

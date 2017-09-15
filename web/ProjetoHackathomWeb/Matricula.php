@@ -64,7 +64,7 @@
                         </div>
 
                         <div class="lado_direito">
-                            <input type="text" name="txt_nome" value="">
+                            <input type="text" name="codigo_anac" value="">
                         </div>
 
                         <div class="lado_esquerdo"><!--Nome-->
@@ -80,7 +80,7 @@
                         </div>
 
                         <div class="lado_direito">
-                            <input type="text" name="txt_nome" value="">
+                            <input type="date" name="dt_nasc" value="">
                         </div>
 
                         <div class="lado_esquerdo"><!--Sexo-->

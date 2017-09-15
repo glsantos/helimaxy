@@ -75,7 +75,7 @@ body{
 
 #container_aluno{
     width:1200px;
-    height:1200px;
+    height:auto;
     margin:auto;
     background-color:#dee0e2;
     margin-bottom:10px;
@@ -97,7 +97,7 @@ body{
     font-weight:900;
     font-family:verdana;
     color:#000000;
-    
+
 }
 
 /*linha 1*/
@@ -202,7 +202,7 @@ body{
     height:130px;
     border-top:1px solid #000000;
     border-bottom:1px solid #000000;
-    
+
 }
 
 #container_linha3{
@@ -234,10 +234,10 @@ body{
     width:500px;
     height:50px;
     margin:auto;
-    
+
 }
 /*fim linha 4*/
- 
+
 /*linha 5*/
 #quinta_linha{
     width:1200px;
@@ -255,20 +255,20 @@ body{
 /*linha 6*/
 #sexta_linha{
     width:1200px;
-    height:50px;
+    height:500px;
     border-top:1px solid #000000;
     border-bottom:2px solid #000000;
 }
 
 #container_linha6{
     width:500px;
-    height:50px;
+    height:500px;
     margin:auto;
 }
 /*fim linha6*/
 
 #container_buttons{
-    width:280px;
+    width:270px;
     height:50px;
     margin-left:900px;
     margin-top:10px;

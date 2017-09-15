@@ -4,11 +4,111 @@
     mysql_select_db('db_helimaxy');
 	mysql_set_charset('utf-8');
     
-    $Codigo_anac = $_POST["codigo_anac"];
-    $Nome = $_POST["txt_nome"];
-    $
+        $nome = "";
+        $dt_nasc = "";
+        $sexo = "";
+        $nacionalidade = "";
+        $naturalidade = "";
+        $tipo_sangue = "";
+        $cma = "";
+        $alergia = "";
+        $phh = "";
+        $estado_civil = "";
+        $nome_pai = ""; 
+        $nome_mae = "";
+        $rg = "";
+        $cpf = "";
+        $reservista = "";
+        $orgao = "";
+        $titulo_eleitor = "";
+        $escolaridade = "";
+        $rua = "";
+        $numero = "";
+        $cidade = "";
+        $estado = "";
+        $cep = "";
+        $telefone = "";
+        $celular = "";
+        $email = "";
+        $emergencia = "";
+        $btn_inserir = "";
     
-    
+    //Verifica se o botão existe
+    if(isset($_POST['btn_inserir'])){
+        $nome = $_POST["txt_nome"];
+        $sexo = $_POST["rdo_sexo"];
+        $estado_civil=$_POST["cb_estado_civil"];
+        $rg = $_POST["txt_rg"];
+        $cpf = $_POST["txt_cpf"];
+        $escolaridade = $_POST["cb_escolaridade"];
+        $naturalidade = $_POST["txt_naturalidade"];
+        $nacionalidade = $_POST["cb_nacionalidade"];
+        $dt_nasc = $_POST["dt_nasc"];
+        $nome_pai = $_POST["txt_nome_pai"]; 
+        $nome_mae = $_POST["txt_nome_mae"];
+        $tipo_sangue = $_POST["cb_tipo_sangue"];
+        $alergia = $_POST["txt_alergia"];
+//        $cma = $_POST["txt_cma"];
+        
+//        $phh = $_POST["txt_phh"];
+        
+        
+        
+//        $reservista = $_POST["txt_reservista"];
+//        $orgao = $_POST["txt_orgao"];
+//        $titulo_eleitor = $_POST["txt_titulo_eleitor"];
+        
+//        $rua = $_POST["txt_rua"];
+//        $numero = $_POST["txt_numero"];
+//        $cidade = $_POST["cb_cidade"];
+//        $estado = $_POST["cb_estado"];
+//        $cep = $_POST["txt_cep"];
+//        $telefone = $_POST["txt_telefone"];
+//        $celular = $_POST["txt_celular"];
+//        $email = $_POST["txt_email"];
+//        $emergencia = $_POST["txt_emergencia"];
+//        $btn_inserir = $_POST["btn_inserir"];
+        
+        $sql= "INSERT INTO tbl_aluno(nome,sexo,estado_civil,rg,cpf,escolaridade,naturalidade,nacionalidade,nascimento,nome_pai,nome_mae,tipo_sangue,alergias) VALUES ('".$nome."','".$sexo."','".$estado_civil."','".$rg."','".$cpf."','".$escolaridade."','".$naturalidade."','".$nacionalidade."','".$dt_nasc."','".$nome_pai."','".$nome_mae."','".$tipo_sangue."','".$alergia."');";
+        
+        $inserir = mysql_query($sql);
+        
+        if($inserir){
+            echo("inserido com Sucesso");
+        }else{
+            echo("Deu ruim amigao");
+        }
+     echo($sql);   
+    }
+
+    //botão editar
+    if(isset($_POST['btn_editar'])){
+        $id = $_POST["id_aluno"];
+        $nome = $_POST["txt_nome"];
+        $sexo = $_POST["rdo_sexo"];
+        $estado_civil=$_POST["cb_estado_civil"];
+        $rg = $_POST["txt_rg"];
+        $cpf = $_POST["txt_cpf"];
+        $escolaridade = $_POST["cb_escolaridade"];
+        $naturalidade = $_POST["txt_naturalidade"];
+        $nacionalidade = $_POST["cb_nacionalidade"];
+        $dt_nasc = $_POST["dt_nasc"];
+        $nome_pai = $_POST["txt_nome_pai"]; 
+        $nome_mae = $_POST["txt_nome_mae"];
+        $tipo_sangue = $_POST["cb_tipo_sangue"];
+        $alergia = $_POST["txt_alergia"];  
+        
+        $sql= "UPDATE tbl_aluno SET nome='$nome',sexo='$sexo',estado_civil='$estado_civil',rg='$rg',cpf='$cpf',escolaridade='$escolaridade',naturalidade='$naturalidade',nacionalidade='$nacionalidade',nascimento='$dt_nasc',nome_pai='$nome_pai',nome_mae='$nome_mae',tipo_sangue='$tipo_sangue',alergias='$alergia' WHERE id_aluno='$id';";
+        
+        $editar = mysql_query($sql);
+        
+        if($editar){
+            echo("Editado com sucesso");
+        }else{
+            echo("Deu Ruim Amigão");
+        }
+        echo($sql);
+    }
     
 ?>
 
@@ -80,11 +180,11 @@
                         <div id="container_linha1">
 
                             <div class="lado_esquerdo"><!--Código Anac-->
-                                <a>Código Anac</a>
+                                <a>Id Aluno</a>
                             </div>
 
                             <div class="lado_direito">
-                                <input type="text" name="codigo_anac" value="">
+                                <input type="text" name="id_aluno" value="">
                             </div>
 
                             <div class="button_pesquisar">
@@ -113,8 +213,8 @@
 
                             <div id="container_sexo">
 
-                                    <input type="radio" name="rdo_sexo" value="">M
-                                    <input type="radio" name="rdo_sexo" value="">F
+                                    <input type="radio" name="rdo_sexo" value="M">M
+                                    <input type="radio" name="rdo_sexo" value="F">F
 
                             </div>
 
@@ -124,7 +224,7 @@
 
                             <div class="lado_direito">
                                 <select name="cb_nacionalidade">
-                                    <option value="">brasileira</option>
+                                    <option value="b">brasileira</option>
                                 </select>
                             </div>
 
@@ -141,10 +241,10 @@
                             </div>
 
                             <div class="lado_direito">
-                                <select name="tipo_sanguineo">
-                                    <option value="">A</option>
-                                    <option value="">B</option>
-                                    <option value="">O</option>
+                                <select name="cb_tipo_sangue">
+                                    <option value="A">A</option>
+                                    <option value="b">B</option>
+                                    <option value="O">O</option>
                                     <option value="-">Outro</option>
                                 </select>
                             </div>
@@ -184,11 +284,11 @@
                             </div>
 
                             <div class="lado_direito">
-                                <select name="estado_civil">
-                                    <option value="">Casado</option>
-                                    <option value="">Solteiro</option>
+                                <select name="cb_estado_civil">
+                                    <option value="C">Casado</option>
+                                    <option value="S">Solteiro</option>
 
-                                    <option value="">Viuvo</option>
+                                    <option value="V">Viuvo</option>
 
                                     <option value="-">Outro</option>
                                 </select>
@@ -267,7 +367,11 @@
                             </div>
 
                             <div class="lado_direito">
-                                <input type="text" name="txt_escolaridade" value="">
+                                <select name="cb_escolaridade">
+                                    <option value="1">1º</option>
+                                    <option value="2">2°</option>
+                                    <option value="3">3°</option>
+                                </select>
                             </div>
                         </div>
                     </div>
@@ -295,10 +399,10 @@
                             </div>
 
                             <div class="lado_direito">
-                                <select name="cidade">
-                                    <option value="">A</option>
-                                    <option value="">B</option>
-                                    <option value="">O</option>
+                                <select name="cb_cidade">
+                                    <option value="A">A</option>
+                                    <option value="B">B</option>
+                                    <option value="O">O</option>
                                     <option value="-">Outro</option>
                                 </select>
                             </div>
@@ -308,10 +412,10 @@
                             </div>
 
                             <div class="lado_direito">
-                                <select name="estado">
-                                    <option value="">A</option>
-                                    <option value="">B</option>
-                                    <option value="">O</option>
+                                <select name="cb_estado">
+                                    <option value="A">A</option>
+                                    <option value="B">B</option>
+                                    <option value="O">O</option>
                                     <option value="-">Outro</option>
                                 </select>
                             </div>
@@ -364,7 +468,7 @@
 
                     <div id="container_buttons">
                         <input type="submit" name="btn_inserir" value="Inserir">
-                        <input type="submit" name="btn_deletar" value="Deletar">
+                        <input type="submit" name="btn_editar" value="Editard">
                     </div>
 
 

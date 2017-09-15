@@ -109,14 +109,14 @@ body{
 }
 
 #container_linha1{
-    width:400px;
+    width:500px;
     height:450px;
     margin:auto;
 }
 
 .lado_esquerdo{
     width:200px;
-    right:30px;
+    height:30px;
     margin-top:5px;
     margin-bottom:10px;
     float:left;
@@ -131,7 +131,7 @@ body{
 }
 
 .lado_direito{
-    width:150px;
+    width:200px;
     height:30px;
     margin-top:5px;
     margin-left:5px;
@@ -141,12 +141,39 @@ body{
 
 .lado_direito input{
     width:200px;
-    height:15px;
+    height:20px;
     border-top:0px;
     border-left:0px;
     border-right:0px;
     border-bottom: 1px solid #4f75ad;
     background-color:#f4f5f7;
+}
+
+#container_sexo{
+    width:200px;
+    height:30px;
+    margin-top:5px;
+    margin-left:5px;
+    float:left;
+    margin-bottom:10px;
+}
+
+
+.button_pesquisar{
+    width:100px;
+    height:30px;
+    position:absolute;
+    margin-left:420px;
+    margin-top:5px;
+}
+
+.button_pesquisar input{
+    width:100px;
+    height:30px;
+    color:#ffffff;
+    background-color:#525963;
+    font-family: verdana;
+    border-radius: 10px 5px 10px 5px;
 }
 
 /*fim linha 1*/
@@ -161,7 +188,7 @@ body{
 }
 
 #container_linha2{
-    width:450px;
+    width:500px;
     height:100px;
     margin:auto;
 }
@@ -178,14 +205,14 @@ body{
 }
 
 #container_linha3{
-    width:400px;
+    width:500px;
     height:130px;
     position:absolute;
     margin-left:200px;
 }
 
 #container2_linha3{
-    width:450px;
+    width:500px;
     height:130px;
     margin-left:650px;
     position:absolute;
@@ -203,7 +230,7 @@ body{
 }
 
 #container_linha4{
-    width:400px;
+    width:500px;
     height:50px;
     margin:auto;
     
@@ -218,7 +245,7 @@ body{
     border-bottom:1px solid #000000;
 }
 #container_linha5{
-    width:800px;
+    width:900px;
     height:220px;
     margin:auto;
 }
@@ -233,7 +260,7 @@ body{
 }
 
 #container_linha6{
-    width:450px;
+    width:500px;
     height:50px;
     margin:auto;
 }
@@ -253,6 +280,5 @@ body{
     background-color:#525963;
     font-family: verdana;
     border-radius: 10px 5px 10px 5px;
-}
 
 /*----------------------FIM ALUNO-----------------------*/

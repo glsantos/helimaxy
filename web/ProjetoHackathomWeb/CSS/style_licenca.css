@@ -70,3 +70,218 @@ body{
 }
 
 /*---------------------FIM MENU PÁGINAS--------------------*/
+
+/*----------------------Licença-------------------*/
+
+
+#container_aluno{
+    width:1200px;
+    height:1200px;
+    margin:auto;
+    background-color:#dee0e2;
+    margin-bottom:10px;
+    border-radius:10px;
+    box-shadow: 5px 5px #d3d1d1;
+}
+
+#titulo_aluno{
+    width:1200px;
+    height:50px;
+    padding-top:10px;
+    margin-top:10px;
+    text-align: center;
+    border-bottom: 1px solid #000000;
+}
+
+#titulo_aluno h2{
+    font-size:20px;
+    font-weight:900;
+    font-family:verdana;
+    color:#000000;
+    
+}
+
+/*linha 1*/
+
+#primeira_linha{
+    width:1200px;
+    height:450px;
+    border-top:1px solid #000000;
+    border-bottom:1px solid #000000;
+}
+
+#container_linha1{
+    width:500px;
+    height:450px;
+    margin:auto;
+}
+
+.lado_esquerdo{
+    width:200px;
+    height:30px;
+    margin-top:5px;
+    margin-bottom:10px;
+    float:left;
+    text-align:right;
+}
+
+.lado_esquerdo a{
+    font-size:14px;
+    font-weight:900;
+    font-family:verdana;
+    color:#000000;
+}
+
+.lado_direito{
+    width:200px;
+    height:30px;
+    margin-top:5px;
+    margin-left:5px;
+    float:left;
+    margin-bottom:10px;
+}
+
+.lado_direito input{
+    width:200px;
+    height:20px;
+    border-top:0px;
+    border-left:0px;
+    border-right:0px;
+    border-bottom: 1px solid #4f75ad;
+    background-color:#f4f5f7;
+}
+
+#container_sexo{
+    width:200px;
+    height:30px;
+    margin-top:5px;
+    margin-left:5px;
+    float:left;
+    margin-bottom:10px;
+}
+
+
+.button_pesquisar{
+    width:100px;
+    height:30px;
+    position:absolute;
+    margin-left:420px;
+    margin-top:5px;
+}
+
+.button_pesquisar input{
+    width:100px;
+    height:30px;
+    color:#ffffff;
+    background-color:#525963;
+    font-family: verdana;
+    border-radius: 10px 5px 10px 5px;
+}
+
+/*fim linha 1*/
+
+/*linha 2*/
+
+#segunda_linha{
+    width:1200px;
+    height:130px;
+    border-top:1px solid #000000;
+    border-bottom:1px solid #000000;
+}
+
+#container_linha2{
+    width:500px;
+    height:100px;
+    margin:auto;
+}
+
+/*fim linha2*/
+
+/*linha 3*/
+#terceira_linha{
+    width:1200px;
+    height:130px;
+    border-top:1px solid #000000;
+    border-bottom:1px solid #000000;
+    
+}
+
+#container_linha3{
+    width:500px;
+    height:130px;
+    position:absolute;
+    margin-left:200px;
+}
+
+#container2_linha3{
+    width:500px;
+    height:130px;
+    margin-left:650px;
+    position:absolute;
+}
+
+/*fim linha3*/
+
+/*linha 4*/
+
+#quarta_linha{
+    width:1200px;
+    height:50px;
+    border-top:1px solid #000000;
+    border-bottom:1px solid #000000;
+}
+
+#container_linha4{
+    width:500px;
+    height:50px;
+    margin:auto;
+    
+}
+/*fim linha 4*/
+ 
+/*linha 5*/
+#quinta_linha{
+    width:1200px;
+    height:220px;
+    border-top:1px solid #000000;
+    border-bottom:1px solid #000000;
+}
+#container_linha5{
+    width:900px;
+    height:220px;
+    margin:auto;
+}
+/*fim linha5*/
+
+/*linha 6*/
+#sexta_linha{
+    width:1200px;
+    height:50px;
+    border-top:1px solid #000000;
+    border-bottom:2px solid #000000;
+}
+
+#container_linha6{
+    width:500px;
+    height:50px;
+    margin:auto;
+}
+/*fim linha6*/
+
+#container_buttons{
+    width:280px;
+    height:50px;
+    margin-left:900px;
+    margin-top:10px;
+}
+
+#container_buttons input{
+    width:130px;
+    height:40px;
+    color:#ffffff;
+    background-color:#525963;
+    font-family: verdana;
+    border-radius: 10px 5px 10px 5px;
+}
+
+/*-------------------Fim lincenca------------------*/

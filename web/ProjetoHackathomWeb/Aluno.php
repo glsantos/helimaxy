@@ -66,7 +66,11 @@
                         <div class="lado_direito">
                             <input type="text" name="txt_nome" value="">
                         </div>
-
+                        
+                        <div class="button_pesquisar">
+                            <input type="submit" name="btn_pusquisar_aluno" value="pesquisar">
+                        </div>
+                        
                         <div class="lado_esquerdo"><!--Nome-->
                             <a>Nome</a>
                         </div>
@@ -80,15 +84,18 @@
                         </div>
 
                         <div class="lado_direito">
-                            <input type="text" name="txt_nome" value="">
+                            <input type="date" name="txt_nasc" value="">
                         </div>
 
                         <div class="lado_esquerdo"><!--Sexo-->
                             <a>Sexo</a>
                         </div>
 
-                        <div class="lado_direito">
-                            <input type="text" name="txt_nome" value="">
+                        <div id="container_sexo">
+                            
+                                <input type="radio" name="rdo_sexo" value="">M
+                                <input type="radio" name="rdo_sexo" value="">F
+                        
                         </div>
 
                         <div class="lado_esquerdo"><!--Nacionalidade-->
@@ -96,7 +103,11 @@
                         </div>
 
                         <div class="lado_direito">
-                            <input type="text" name="txt_nome" value="">
+                            <select name="nacionalidade">
+                                <option value="">A</option>
+                                <option value="">A</option>
+                                <option value="-">Outro</option>
+                            </select>
                         </div>
 
                         <div class="lado_esquerdo"><!--Naturalidade-->
@@ -104,7 +115,7 @@
                         </div>
 
                         <div class="lado_direito">
-                            <input type="text" name="txt_nome" value="">
+                            <input type="text" name="txt_naturalidade" value="">
                         </div>
 
                         <div class="lado_esquerdo"><!--Tipo Sanguineo-->
@@ -112,7 +123,12 @@
                         </div>
 
                         <div class="lado_direito">
-                            <input type="text" name="txt_nome" value="">
+                            <select name="tipo_sanguineo">
+                                <option value="">A</option>
+                                <option value="">B</option>
+                                <option value="">O</option>
+                                <option value="-">Outro</option>
+                            </select>
                         </div>
 
                         <div class="lado_esquerdo"><!--CMA-->
@@ -120,7 +136,7 @@
                         </div>
 
                         <div class="lado_direito">
-                            <input type="text" name="txt_nome" value="">
+                            <input type="text" name="txt_cma" value="">
                         </div>
 
                         <div class="lado_esquerdo"><!--Alergia-->
@@ -128,7 +144,7 @@
                         </div>
 
                         <div class="lado_direito">
-                            <input type="text" name="txt_nome" value="">
+                            <input type="text" name="txt_alergia" value="">
                         </div>
 
                         <div class="lado_esquerdo"><!--PPH-->
@@ -136,7 +152,7 @@
                         </div>
 
                         <div class="lado_direito">
-                            <input type="text" name="txt_nome" value="">
+                            <input type="text" name="txt_phh" value="">
                         </div>
                         
                     </div>
@@ -150,7 +166,14 @@
                         </div>
 
                         <div class="lado_direito">
-                            <input type="text" name="txt_nome" value="">
+                            <select name="estado_civil">
+                                <option value="">Casado</option>
+                                <option value="">Solteiro</option>
+                                
+                                <option value="">Viuvo</option>
+                                
+                                <option value="-">Outro</option>
+                            </select>
                         </div>
 
                         <div class="lado_esquerdo"><!--Nome do pai-->
@@ -158,7 +181,7 @@
                         </div>
 
                         <div class="lado_direito">
-                            <input type="text" name="txt_nome" value="">
+                            <input type="text" name="txt_nome_pai" value="">
                         </div>
 
                         <div class="lado_esquerdo"><!--Nome de mãe-->
@@ -166,7 +189,7 @@
                         </div>
 
                         <div class="lado_direito">
-                            <input type="text" name="txt_nome" value="">
+                            <input type="text" name="txt_nome_mae" value="">
                         </div>
                     </div>
                 </div>
@@ -179,7 +202,7 @@
                         </div>
 
                         <div class="lado_direito">
-                            <input type="text" name="txt_nome" value="">
+                            <input type="text" name="txt_rg" value="">
                         </div>
 
                         <div class="lado_esquerdo"><!--CPF-->
@@ -187,7 +210,7 @@
                         </div>
 
                         <div class="lado_direito">
-                            <input type="text" name="txt_nome" value="">
+                            <input type="text" name="txt_cpf" value="">
                         </div>
 
                         <div class="lado_esquerdo"><!--Reservista-->
@@ -195,7 +218,7 @@
                         </div>
 
                         <div class="lado_direito">
-                            <input type="text" name="txt_nome" value="">
+                            <input type="text" name="txt_reservista" value="">
                         </div>
                         
                     </div>
@@ -206,7 +229,7 @@
                         </div>
 
                         <div class="lado_direito">
-                            <input type="text" name="txt_nome" value="">
+                            <input type="text" name="txt_orgao" value="">
                         </div>
 
                         <div class="lado_esquerdo"><!--Titulo de eleitor-->
@@ -214,7 +237,7 @@
                         </div>
 
                         <div class="lado_direito">
-                            <input type="text" name="txt_nome" value="">
+                            <input type="text" name="txt_titulo_eleitor" value="">
                         </div>
                     </div>
                 </div>
@@ -226,7 +249,7 @@
                         </div>
 
                         <div class="lado_direito">
-                            <input type="text" name="txt_nome" value="">
+                            <input type="text" name="txt_escolaridade" value="">
                         </div>
                     </div>
                 </div>
@@ -238,7 +261,7 @@
                         </div>
 
                         <div class="lado_direito">
-                            <input type="text" name="txt_nome" value="">
+                            <input type="text" name="txt_rua" value="">
                         </div>
 
                         <div class="lado_esquerdo"><!--Alergia-->
@@ -246,7 +269,7 @@
                         </div>
 
                         <div class="lado_direito">
-                            <input type="text" name="txt_nome" value="">
+                            <input type="text" name="txt_numero" value="">
                         </div>
 
                         <div class="lado_esquerdo"><!--Cidade-->
@@ -254,7 +277,12 @@
                         </div>
 
                         <div class="lado_direito">
-                            <input type="text" name="txt_nome" value="">
+                            <select name="cidade">
+                                <option value="">A</option>
+                                <option value="">B</option>
+                                <option value="">O</option>
+                                <option value="-">Outro</option>
+                            </select>
                         </div>
                         
                         <div class="lado_esquerdo"><!--Estado-->
@@ -262,7 +290,12 @@
                         </div>
 
                         <div class="lado_direito">
-                            <input type="text" name="txt_nome" value="">
+                            <select name="estado">
+                                <option value="">A</option>
+                                <option value="">B</option>
+                                <option value="">O</option>
+                                <option value="-">Outro</option>
+                            </select>
                         </div>
                         
                         <div class="lado_esquerdo"><!--Cep-->
@@ -270,7 +303,7 @@
                         </div>
 
                         <div class="lado_direito">
-                            <input type="text" name="txt_nome" value="">
+                            <input type="text" name="txt_cep" value="">
                         </div>
                         
                         <div class="lado_esquerdo"><!--Telefone-->
@@ -278,7 +311,7 @@
                         </div>
 
                         <div class="lado_direito">
-                            <input type="text" name="txt_nome" value="">
+                            <input type="text" name="txt_telefone" value="">
                         </div>
                         
                         <div class="lado_esquerdo"><!--Celular-->
@@ -286,7 +319,7 @@
                         </div>
 
                         <div class="lado_direito">
-                            <input type="text" name="txt_nome" value="">
+                            <input type="text" name="txt_celular" value="">
                         </div>
                         
                         <div class="lado_esquerdo"><!--Cep-->
@@ -294,7 +327,7 @@
                         </div>
 
                         <div class="lado_direito">
-                            <input type="text" name="txt_nome" value="">
+                            <input type="text" name="txt_email" value="">
                         </div>
                     </div>
                 </div>
@@ -306,7 +339,7 @@
                         </div>
 
                         <div class="lado_direito">
-                            <input type="text" name="txt_nome" value="">
+                            <input type="text" name="txt_emergencia" value="">
                         </div>
                     </div>
                 </div>

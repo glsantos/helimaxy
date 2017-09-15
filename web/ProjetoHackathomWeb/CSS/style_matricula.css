@@ -75,7 +75,7 @@ body{
 
 #container_aluno{
     width:1200px;
-    height:1200px;
+    height:300px;
     margin:auto;
     background-color:#dee0e2;
     margin-bottom:10px;
@@ -104,9 +104,9 @@ body{
 
 #primeira_linha{
     width:1200px;
-    height:450px;
+    height:150px;
     border-top:1px solid #000000;
-    border-bottom:1px solid #000000;
+    border-bottom:2px solid #000000;
 }
 
 #container_linha1{
@@ -142,7 +142,7 @@ body{
 
 .lado_direito input{
     width:200px;
-    height:15px;
+    height:20px;
     border-top:0px;
     border-left:0px;
     border-right:0px;

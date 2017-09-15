@@ -1,3 +1,53 @@
+<?php
+
+    $conexao = mysql_connect('localhost', 'root', 'bcd127');
+    mysql_select_db('db_helimaxy');
+	mysql_set_charset('utf-8');
+    
+    $Aluno = "";
+    $Curso = "";
+    $Dt_matricula = "";
+
+    if(isset($_GET["btn_inserir"])){
+        $Aluno = $_GET["txt_cpf_aluno"];
+        $Curso = $_GET["cb_cursos"];
+        $Dt_matricula = $_GET["dt_matricula"];
+        
+        //echo($Curso);
+        
+        $sqlAluno = "SELECT id_aluno FROM tbl_aluno WHERE cpf='".$Aluno."'";
+        $selectAluno=mysql_query($sqlAluno);
+        
+        if($rsAluno=mysql_fetch_array($selectAluno)){
+            $idAluno=$rsAluno["id_aluno"];
+        }
+          
+        $sqlCurso = "SELECT id_curso FROM tbl_curso WHERE curso='".$Curso."'";
+        
+        $selectCurso=mysql_query($sqlCurso);
+        
+        if($rsCurso=mysql_fetch_array($selectCurso)){
+            $idCurso=$rsCurso["id_curso"];
+        }
+        echo($idAluno);
+        echo($idCurso);
+        
+        
+       // echo("->>".$idCurso);
+        
+       $sql = "INSERT INTO tbl_matricula(id_aluno,id_curso,dt_matricula) VALUES ('".$idAluno."','".$idCurso."','".$Dt_matricula."');";
+        
+        $inserir = mysql_query($sql);
+        
+       if($inserir){
+            echo('Matricula cadastrada com sucesso');
+        }else{
+            echo("erro");
+        }
+    }
+
+?>
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -7,6 +57,7 @@
     </head>
     
     <body>
+        <form action="Matricula.php" method="get" enctype="multipart/form-data">
         <header id="header">
             
             <div id="container_menu">
@@ -60,234 +111,37 @@
                     <div id="container_linha1">
                         
                         <div class="lado_esquerdo"><!--Código Anac-->
-                            <a>Código Anac</a>
+                            <a>Cpf Aluno</a>
                         </div>
 
                         <div class="lado_direito">
-                            <input type="text" name="codigo_anac" value="">
+                            <input type="text" name="txt_cpf_aluno" value="">
                         </div>
 
                         <div class="lado_esquerdo"><!--Nome-->
-                            <a>Nome</a>
+                            <a>Curso</a>
                         </div>
 
                         <div class="lado_direito">
-                            <input type="text" name="txt_nome" value="">
+                            <select name="cb_cursos">
+                                <option value="Piloto Privado">Piloto Privado</option>
+                                <option value="Piloto Comercial">Piloto Comercial</option>
+                                <option value="Instrutor de Voo">Instrutor de Voo</option>
+                                <option value="Inclusão Classe">Inclusão Classe</option>
+                                <option value="Sob-Capota">Sob-Capota</option>
+                            </select>
                         </div>
 
                         <div class="lado_esquerdo"><!--Nascimento-->
-                            <a>Nascimento</a>
+                            <a>Data Matricula</a>
                         </div>
 
                         <div class="lado_direito">
-                            <input type="date" name="dt_nasc" value="">
+                            <input type="date" name="dt_matricula" value="">
                         </div>
-
-                        <div class="lado_esquerdo"><!--Sexo-->
-                            <a>Sexo</a>
-                        </div>
-
-                        <div class="lado_direito">
-                            <input type="text" name="txt_nome" value="">
-                        </div>
-
-                        <div class="lado_esquerdo"><!--Nacionalidade-->
-                            <a>Nacionalidade</a>
-                        </div>
-
-                        <div class="lado_direito">
-                            <input type="text" name="txt_nome" value="">
-                        </div>
-
-                        <div class="lado_esquerdo"><!--Naturalidade-->
-                            <a>Naturalidade</a>
-                        </div>
-
-                        <div class="lado_direito">
-                            <input type="text" name="txt_nome" value="">
-                        </div>
-
-                        <div class="lado_esquerdo"><!--Tipo Sanguineo-->
-                            <a>Tipo Sanguineo</a>
-                        </div>
-
-                        <div class="lado_direito">
-                            <input type="text" name="txt_nome" value="">
-                        </div>
-
-                        <div class="lado_esquerdo"><!--Alergia-->
-                            <a>Alergia</a>
-                        </div>
-
-                        <div class="lado_direito">
-                            <input type="text" name="txt_nome" value="">
-                        </div>
-
-                        <div class="lado_esquerdo"><!--PPH-->
-                            <a>Valor Hora</a>
-                        </div>
-
-                        <div class="lado_direito">
-                            <input type="text" name="txt_nome" value="">
-                        </div>
-                        
+    
                     </div>
                     
-                </div>
-                
-                <div id="segunda_linha">
-                    <div id="container_linha2">
-                        <div class="lado_esquerdo"><!--Estado Civil-->
-                            <a>Estado Civil</a>
-                        </div>
-
-                        <div class="lado_direito">
-                            <input type="text" name="txt_nome" value="">
-                        </div>
-
-                        <div class="lado_esquerdo"><!--Nome do pai-->
-                            <a>Nome do Pai</a>
-                        </div>
-
-                        <div class="lado_direito">
-                            <input type="text" name="txt_nome" value="">
-                        </div>
-
-                        <div class="lado_esquerdo"><!--Nome de mãe-->
-                            <a>Nome da Mãe</a>
-                        </div>
-
-                        <div class="lado_direito">
-                            <input type="text" name="txt_nome" value="">
-                        </div>
-                    </div>
-                </div>
-                
-                <div id="terceira_linha">
-                    <div id="container_linha3">
-                        
-                        <div class="lado_esquerdo"><!--RG-->
-                            <a>RG</a>
-                        </div>
-
-                        <div class="lado_direito">
-                            <input type="text" name="txt_nome" value="">
-                        </div>
-
-                        <div class="lado_esquerdo"><!--CPF-->
-                            <a>CPF</a>
-                        </div>
-
-                        <div class="lado_direito">
-                            <input type="text" name="txt_nome" value="">
-                        </div>
-                        
-                    </div>
-        
-                </div>
-                
-                <div id="quarta_linha">
-                    <div id="container_linha4">
-                        <div class="lado_esquerdo"><!--Escolaridade-->
-                            <a>Escolaridade</a>
-                        </div>
-
-                        <div class="lado_direito">
-                            <select name="cb_escolaridade">
-                                <option value="">1º</option>
-                                <option value="">2°</option>
-                                <option value="">3°</option>
-                            </select>
-                        </div>
-                    </div>
-                </div>
-                
-                <div id="quinta_linha">
-                    <div id="container_linha5">
-                        <div class="lado_esquerdo"><!--CMA-->
-                            <a>Rua</a>
-                        </div>
-
-                        <div class="lado_direito">
-                            <input type="text" name="txt_nome" value="">
-                        </div>
-
-                        <div class="lado_esquerdo"><!--Alergia-->
-                            <a>Número</a>
-                        </div>
-
-                        <div class="lado_direito">
-                            <input type="text" name="txt_nome" value="">
-                        </div>
-
-                        <div class="lado_esquerdo"><!--Cidade-->
-                            <a>Cidade</a>
-                        </div>
-
-                        <div class="lado_direito">
-                            <select name="example">
-                                <option value="">A</option>
-                                <option value="">A</option>
-                                <option value="-">Outro</option>
-                            </select>
-                        </div>
-                        
-                        <div class="lado_esquerdo"><!--Estado-->
-                            <a>Estado</a>
-                        </div>
-
-                        <div class="lado_direito">
-                            <select name="example">
-                                <option value="">A</option>
-                                <option value="">A</option>
-                                <option value="-">Outro</option>
-                            </select>
-                        </div>
-                        
-                        <div class="lado_esquerdo"><!--Cep-->
-                            <a>Cep</a>
-                        </div>
-
-                        <div class="lado_direito">
-                            <input type="text" name="txt_nome" value="">
-                        </div>
-                        
-                        <div class="lado_esquerdo"><!--Telefone-->
-                            <a>Telefone</a>
-                        </div>
-
-                        <div class="lado_direito">
-                            <input type="text" name="txt_nome" value="">
-                        </div>
-                        
-                        <div class="lado_esquerdo"><!--Celular-->
-                            <a>Celular</a>
-                        </div>
-
-                        <div class="lado_direito">
-                            <input type="text" name="txt_nome" value="">
-                        </div>
-                        
-                        <div class="lado_esquerdo"><!--Cep-->
-                            <a>Email</a>
-                        </div>
-
-                        <div class="lado_direito">
-                            <input type="text" name="txt_nome" value="">
-                        </div>
-                    </div>
-                </div>
-                
-                <div id="sexta_linha">
-                    <div id="container_linha6">
-                        <div class="lado_esquerdo"><!--Caso de Emergência-->
-                            <a>Caso de Emergência</a>
-                        </div>
-
-                        <div class="lado_direito">
-                            <input type="text" name="txt_nome" value="">
-                        </div>
-                    </div>
                 </div>
                 
                 <div id="container_buttons">
@@ -301,6 +155,7 @@
             
             
         </section>
+        </form>
     </body>
     
 </html>

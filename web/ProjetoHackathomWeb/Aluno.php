@@ -3,7 +3,7 @@
     <head>
         <title>Aluno</title>
         <meta charset="UTF-8">
-        <link rel="stylesheet" type="text/css" href="CSS/style.css">
+        <link rel="stylesheet" type="text/css" href="CSS/style_aluno.css">
     </head>
     
     <body>
@@ -64,7 +64,7 @@
                         </div>
 
                         <div class="lado_direito">
-                            <input type="text" name="txt_nome" value="" maxlength="" size="30">
+                            <input type="text" name="txt_nome" value="">
                         </div>
 
                         <div class="lado_esquerdo"><!--Nome-->

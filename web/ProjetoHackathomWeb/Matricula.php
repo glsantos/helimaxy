@@ -3,7 +3,7 @@
     <head>
         <title>Instrutor</title>
         <meta charset="UTF-8">
-        <link rel="stylesheet" type="text/css" href="CSS/style.css">
+        <link rel="stylesheet" type="text/css" href="CSS/style_matricula.css">
     </head>
     
     <body>

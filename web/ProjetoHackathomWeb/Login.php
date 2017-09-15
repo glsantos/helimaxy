@@ -4,7 +4,7 @@
     <head>
         <title>Login</title>
         <meta charset="UTF-8">
-        <link rel="stylesheet" type="text/css" href="CSS/style.css">
+        <link rel="stylesheet" type="text/css" href="CSS/style_login.css">
     </head>
     
     <body>

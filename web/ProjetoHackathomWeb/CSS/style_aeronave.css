@@ -1,0 +1,72 @@
+/*CSS*/
+body{
+    margin:auto;
+    padding:0;
+}
+/*------------------------MENU PÁGINAS---------------------*/
+
+#header{
+    width:auto;
+    height:150px;
+    background-color:#043463;
+    box-shadow: 5px 5px #d3d1d1;
+}
+
+#container_menu{
+    width:1200px;
+    height:150px;
+    margin:auto;
+}
+
+#logo{
+    width:200px;
+    height:115px;
+    margin-top:20px;
+    margin-left:10px;
+    position:absolute;
+}
+
+#logo img{
+    width:200px;
+    height:115px;
+    border-radius:10px;
+}
+
+#menu{
+    width:1100px;
+    height:50px;
+    margin-left:280px;
+    margin-top:100px;
+    position:absolute;
+}
+
+#menu ul li{
+    width:120px;
+    height:30px;
+    margin-right:30px;
+    background-color:#ff0000;
+    float:left;
+    list-style-type:none;
+    text-align: center;
+    border-radius:10px 3px;
+}
+
+#menu ul li a{
+    font-size:16px;
+    font-weight:900;
+    font-family:verdana;
+    color:#ffffff;
+    margin-top:5px;
+}
+
+
+#menu ul li a:hover{
+    color:#969ba5;
+}
+
+#menu ul li a:link{
+    color:red;
+    text-decoration:none;
+}
+
+/*---------------------FIM MENU PÁGINAS--------------------*/

@@ -1,6 +1,10 @@
 <?php
 
-      require_once('conexao.php');
+      if($con = mysqli_connect('localhost', 'root', 'bcd127')){
+            mysqli_select_db($con, 'db_helimaxy');
+      }else{
+        echo("Erro na conexão com o Banco de Dados");
+      }
 
 
       /**if($_SESSION['num_sessao']!=null){
@@ -41,37 +45,45 @@
                   <div class="area_resultado">
                       <table class="tbl_resultado">
                           <tr>
-                            <td>Data</td>
-                            <td>Horário</td>
-                            <td>Modelo</td>
-                            <td>Prefixo</td>
-                            <td>De</td>
-                            <td>Para</td>
-                            <td>Pouso</td>
-                            <td>Tempo</td>
-                            <td>Período</td>
-                            <td>Controlador</td>
-                            <td>Navegação</td>
-                            <td>Aluno</td>
-                            <td>Instrutor</td>
-                            <td>Totais</td>
+                            <td class="td_nome">Data</td>
+                            <td class="td_nome">Partida</td>
+                            <td class="td_nome">Corte</td>
+                            <td class="td_nome">Modelo</td>
+                            <td class="td_nome">Prefixo</td>
+                            <td class="td_nome">De</td>
+                            <td class="td_nome">Para</td>
+                            <td class="td_nome">Pouso</td>
+                            <td class="td_nome">Tempo</td>
+                            <td class="td_nome">Período</td>
+                            <td class="td_nome">Comando</td>
+                            <td class="td_nome">Navegação</td>
+                            <td class="td_nome">Aluno</td>
+                            <td class="td_nome">Instrutor</td>
+                            <td class="td_nome">Totais</td>
                           </tr>
                           <tr>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td><a href="#"><img src="IMAGENS/lupa.png"></a></td>
+                            <?php
+                                $sql="select * from vw_relatorio;";
+                                $select=mysqli_query($con,$sql);
+                                while($rs=mysqli_fetch_array($select)){
+                             ?>
+                            <td class="td_resultado"><?php echo($rs['Data']); ?></td>
+                            <td class="td_resultado"><?php echo($rs['HS']); ?></td>
+                            <td class="td_resultado"><?php echo($rs['HR']); ?></td>
+                            <td class="td_resultado"><?php echo($rs['Modelo']); ?></td>
+                            <td class="td_resultado"><?php echo($rs['Prefixo']); ?></td>
+                            <td class="td_resultado"><?php echo($rs['De']); ?></td>
+                            <td class="td_resultado"><?php echo($rs['Para']); ?></td>
+                            <td class="td_resultado"><?php echo($rs['Pousos']); ?></td>
+                            <td class="td_resultado"><?php echo($rs['Tempo']); ?></td>
+                            <td class="td_resultado"><?php echo($rs['Periodo']); ?></td>
+                            <td class="td_resultado"><?php echo($rs['Comando']); ?></td>
+                            <td class="td_resultado"><?php echo($rs['Navegacao']); ?></td>
+                            <td class="td_resultado"><?php echo($rs['Aluno']); ?></td>
+                            <td class="td_resultado"><?php echo($rs['Instrutor']); ?></td>
+                            <td class="td_resultado"><a href="#"><img src="IMAGENS/lupa.png"></a></td>
                           </tr>
+                          <?php } ?>
                       </table>
                   </div>
               </div>

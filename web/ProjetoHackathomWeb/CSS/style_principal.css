@@ -72,6 +72,23 @@ body{
 /*---------------------FIM MENU P�GINAS--------------------*/
 
 /*------------------------ALUNO-------------------------*/
+.td_nome{
+
+  width:10px;
+  background-color: #043463;
+  color: white;
+  text-align: center;
+  font-weight: bold;
+  font-size: 22px;
+  border-radius: 3px;
+}
+.td_resultado{
+  width:10px;
+  background-color: white ;
+  color: #043463;
+  text-align: center;
+  font-weight: bold;
+}
 .principal{
     width:1000px;
     height:300px;
@@ -94,21 +111,18 @@ body{
 .area_resultado{
     width:100%;
     height: 85%;
-    background-color: yellow;
+    background-color: black;
 }
 .tbl_resultado{
     width:100%;
     height:auto;
-    color: balck;
+    background-color: #;
 }
 .tbl_resultado tr{
     height:20px;
 }
 .tbl_resultado td{
-    width:10px;
-    background-color: magenta;
-    text-align: center;
-    font-weight: bold;
+
 }
 .tbl_resultado img{
     width:25px;
